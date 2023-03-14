@@ -33,11 +33,21 @@ function App() {
     }
   ]
   
+  // handler function
+  const handleInputChange = (event) => {
+    console.log(event.target.value);
+  }
+
   return (
     <div className="App">
       <h1></h1>
       <label></label>
-      <input></input>
+      <input 
+        id="city"
+        name="city"
+        type="text"
+        onChange={handleInputChange}
+      />
       <hr></hr>
       <CityItem cityList={cityList}/>
     </div>
