@@ -1,5 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
+import { CityItem } from './components/CityItem';
 
 function App() {
   const cityList = [
@@ -39,6 +39,7 @@ function App() {
       <label></label>
       <input></input>
       <hr></hr>
+      <CityItem cityList={cityList}/>
     </div>
   );
 }
