@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const locationList = [
+  const cityList = [
     {
       key: '001',
       englishName: 'Shanghai',
@@ -35,7 +35,10 @@ function App() {
   
   return (
     <div className="App">
-      
+      <h1></h1>
+      <label></label>
+      <input></input>
+      <hr></hr>
     </div>
   );
 }
