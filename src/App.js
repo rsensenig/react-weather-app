@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import { InputField } from './components/shared/InputField';
 import { CityItem } from './components/CityItem';
 
 function App() {
@@ -48,12 +49,8 @@ function App() {
   return (
     <div className="App">
       <h1></h1>
-      <label></label>
-      <input 
-        id="city"
-        name="city"
-        type="text"
-        onChange={handleCityNameChange}
+      <InputField
+        handleCityNameChange={handleCityNameChange}
       />
       <hr></hr>
       <CityItem 
