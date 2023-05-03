@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import './App.css';
 import { CityItem } from './components/CityItem';
 
@@ -32,10 +33,16 @@ function App() {
       }
     }
   ]
+
+  const [cityName, setCityName] = useState(null);
   
-  // handler function
-  const handleInputChange = (event) => {
+  const handleCityNameChange = (event) => {
+    setCityName(event.target.value);
     console.log(event.target.value);
+  };
+
+  const handleCityDisplay = (city) => {
+    console.log(`You selected ${city.englishName}`);
   }
 
   return (
@@ -46,10 +53,13 @@ function App() {
         id="city"
         name="city"
         type="text"
-        onChange={handleInputChange}
+        onChange={handleCityNameChange}
       />
       <hr></hr>
-      <CityItem cityList={cityList}/>
+      <CityItem 
+        cityList={cityList}
+        handleCityDisplay={handleCityDisplay}
+      />
     </div>
   );
 }

@@ -1,10 +1,10 @@
-export const CityItem = (props) => {
+export const CityItem = ({ cityList, handleCityDisplay}) => {
     return (
-        props.cityList.map(city => (
-            <ul key={city.id}>
-                <li>Name:{city.englishName}</li>
-                <li>Administrative Area:{city.administrativeArea.id}</li>
-                <li>Country:{city.country.id}</li>
+        cityList.map(city => (
+            <ul key={city.key}>
+                <li>
+                    <button type='button' onClick={() => handleCityDisplay(city)}>{city.englishName}</button>
+                </li>
             </ul>
         ))
     )
